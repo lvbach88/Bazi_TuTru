@@ -146,6 +146,14 @@ public final class TongHopCanChi
 
     }
 
+    public static int getIndexoOfThienCan(CanEnum canEnum){
+        for (int i = 0; i < MuoiThienCan.size(); i++){
+            if (MuoiThienCan.get(i).Can == canEnum) return i;
+        }
+
+        return -1;
+    }
+
     public static DiaChi getDiaChi(ChiEnum chiEnum){
         for (DiaChi dc :
                 MuoiHaiDiaChi) {
@@ -153,6 +161,14 @@ public final class TongHopCanChi
         }
 
         return null;
+    }
+
+    public static int getIndexoOfDiaChi(ChiEnum chiEnum){
+        for (int i = 0; i < MuoiHaiDiaChi.size(); i++){
+            if (MuoiHaiDiaChi.get(i).Ten == chiEnum) return i;
+        }
+
+        return -1;
     }
 }
 

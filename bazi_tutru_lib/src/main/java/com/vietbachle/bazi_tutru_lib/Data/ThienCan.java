@@ -7,7 +7,7 @@ package com.vietbachle.bazi_tutru_lib.Data;
 /// <summary>
 /// ThienCan with name and NguHanh, Am Duong
 /// </summary>
-class ThienCan extends TruCanChiBase
+public class ThienCan extends TruCanChiBase
 {
     public CanEnum Can; // { get; private set; }
     public NguHanhEnum NguHanh; // { get; private set; }
