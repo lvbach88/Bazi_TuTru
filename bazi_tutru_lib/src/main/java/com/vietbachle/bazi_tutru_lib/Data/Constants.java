@@ -5,6 +5,10 @@ package com.vietbachle.bazi_tutru_lib.Data;
  */
 
 public class Constants {
+
+    public static int THIEN_CAN_SIZE = 10;
+    public static int DIA_CHI_SIZE = 12;
+
     public static String NAP_AM = "NAP_AM";
     public static String VONG_TRUONG_SINH = "VONG_TRUONG_SINH";
 

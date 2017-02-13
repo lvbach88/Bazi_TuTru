@@ -53,44 +53,44 @@ public final class LookUpTable {
             case None:
                 break;
             case Giap:
-                start = TongHopCanChi.getIndexoOfDiaChi(ChiEnum.Hoi); //11; //Hoi
+                start = TongHopCanChi.getIndexoOfDiaChiByEnum(ChiEnum.Hoi); //11; //Hoi
                 direction = 1;
                 break;
             case At:
-                start = TongHopCanChi.getIndexoOfDiaChi(ChiEnum.Ngo); //6; //Ngo
+                start = TongHopCanChi.getIndexoOfDiaChiByEnum(ChiEnum.Ngo); //6; //Ngo
                 direction = -1;
                 break;
             case Binh:
             case Mau:
-                start = TongHopCanChi.getIndexoOfDiaChi(ChiEnum.Dan); //2; //Dan
+                start = TongHopCanChi.getIndexoOfDiaChiByEnum(ChiEnum.Dan); //2; //Dan
                 direction = 1;
                 break;
             case Dinh:
             case Ky:
-                start = TongHopCanChi.getIndexoOfDiaChi(ChiEnum.Dau); //9; //Dau
+                start = TongHopCanChi.getIndexoOfDiaChiByEnum(ChiEnum.Dau); //9; //Dau
                 direction = -1;
                 break;
             case Canh:
-                start = TongHopCanChi.getIndexoOfDiaChi(ChiEnum.Ty); //5; //Ty
+                start = TongHopCanChi.getIndexoOfDiaChiByEnum(ChiEnum.Ty); //5; //Ty
                 direction = 1;
                 break;
             case Tan:
-                start = TongHopCanChi.getIndexoOfDiaChi(ChiEnum.Ti); //0; //Ti
+                start = TongHopCanChi.getIndexoOfDiaChiByEnum(ChiEnum.Ti); //0; //Ti
                 direction = -1;
                 break;
             case Nham:
-                start = TongHopCanChi.getIndexoOfDiaChi(ChiEnum.Than); //8; //Than
+                start = TongHopCanChi.getIndexoOfDiaChiByEnum(ChiEnum.Than); //8; //Than
                 direction = 1;
                 break;
             case Quy:
-                start = TongHopCanChi.getIndexoOfDiaChi(ChiEnum.Mao); //3; //Mao
+                start = TongHopCanChi.getIndexoOfDiaChiByEnum(ChiEnum.Mao); //3; //Mao
                 direction = -1;
                 break;
             default:
                 break;
         }
 
-        int dest = TongHopCanChi.getIndexoOfDiaChi(chi);
+        int dest = TongHopCanChi.getIndexoOfDiaChiByEnum(chi);
         int n = TongHopCanChi.MuoiHaiDiaChi.size();
 
         int steps = (direction * (dest - start) + n) % n;
@@ -138,11 +138,11 @@ public final class LookUpTable {
         }
 
         int nChi = TongHopCanChi.MuoiHaiDiaChi.size();
-        int chiStartIndex = TongHopCanChi.getIndexoOfDiaChi(chiStart);
-        int chiDestIndex = TongHopCanChi.getIndexoOfDiaChi(chiToBeFound);
+        int chiStartIndex = TongHopCanChi.getIndexoOfDiaChiByEnum(chiStart);
+        int chiDestIndex = TongHopCanChi.getIndexoOfDiaChiByEnum(chiToBeFound);
         int steps = (chiDestIndex - chiStartIndex + nChi) % nChi;
 
-        int canStartIndex = TongHopCanChi.getIndexoOfThienCan(canStart);
+        int canStartIndex = TongHopCanChi.getIndexoOfThienCanByEnum(canStart);
         int nCan = TongHopCanChi.MuoiThienCan.size();
         int canDestIndex = (canStartIndex + steps) % nCan;
 
@@ -194,11 +194,11 @@ public final class LookUpTable {
         }
 
         int nChi = TongHopCanChi.MuoiHaiDiaChi.size();
-        int chiStartIndex = TongHopCanChi.getIndexoOfDiaChi(chiStart);
-        int chiDestIndex = TongHopCanChi.getIndexoOfDiaChi(chiToBeFound);
+        int chiStartIndex = TongHopCanChi.getIndexoOfDiaChiByEnum(chiStart);
+        int chiDestIndex = TongHopCanChi.getIndexoOfDiaChiByEnum(chiToBeFound);
         int steps = (chiDestIndex - chiStartIndex + nChi) % nChi;
 
-        int canStartIndex = TongHopCanChi.getIndexoOfThienCan(canStart);
+        int canStartIndex = TongHopCanChi.getIndexoOfThienCanByEnum(canStart);
         int nCan = TongHopCanChi.MuoiThienCan.size();
         int canDestIndex = (canStartIndex + steps) % nCan;
 
@@ -235,8 +235,8 @@ public final class LookUpTable {
 
         int diff = Math.abs(year - Constants.SEEDING_YEAR);
 
-        int canIndex = TongHopCanChi.getIndexoOfThienCan(Constants.SEEDING_CAN);
-        int chiIndex = TongHopCanChi.getIndexoOfDiaChi(Constants.SEEDING_CHI);
+        int canIndex = TongHopCanChi.getIndexoOfThienCanByEnum(Constants.SEEDING_CAN);
+        int chiIndex = TongHopCanChi.getIndexoOfDiaChiByEnum(Constants.SEEDING_CHI);
 
         int nCan = TongHopCanChi.MuoiThienCan.size();
         int nChi = TongHopCanChi.MuoiHaiDiaChi.size();
