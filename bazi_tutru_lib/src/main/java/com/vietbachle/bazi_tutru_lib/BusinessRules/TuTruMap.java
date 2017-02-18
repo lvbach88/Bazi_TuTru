@@ -46,20 +46,20 @@ public class TuTruMap {
         for (Tru tru : this.LaSoCuaToi.TuTru.values())
         {
             SetNapAm(tru);
-            tru.ThuocTinh.put(Constants.VONG_TRUONG_SINH, LookUpTable.VongTruongSinh(truNgay.ThienCan.Can, tru.DiaChi.Ten));
+            tru.AddThuocTinh(Constants.VONG_TRUONG_SINH, LookUpTable.VongTruongSinh(truNgay.ThienCan.Can, tru.DiaChi.Ten));
         }
 
         Tru cm = this.LaSoCuaToi.CungMenh;
         Tru tn = this.LaSoCuaToi.ThaiNguyen;
         SetNapAm(cm);
-        cm.ThuocTinh.put(Constants.VONG_TRUONG_SINH, LookUpTable.VongTruongSinh(truNgay.ThienCan.Can, cm.DiaChi.Ten));
+        cm.AddThuocTinh(Constants.VONG_TRUONG_SINH, LookUpTable.VongTruongSinh(truNgay.ThienCan.Can, cm.DiaChi.Ten));
         SetNapAm(tn);
-        tn.ThuocTinh.put(Constants.VONG_TRUONG_SINH, LookUpTable.VongTruongSinh(truNgay.ThienCan.Can, tn.DiaChi.Ten));
+        tn.AddThuocTinh(Constants.VONG_TRUONG_SINH, LookUpTable.VongTruongSinh(truNgay.ThienCan.Can, tn.DiaChi.Ten));
 
         for (Tru tru : this.LaSoCuaToi.DaiVan)
         {
             SetNapAm(tru);
-            tru.ThuocTinh.put(Constants.VONG_TRUONG_SINH, LookUpTable.VongTruongSinh(truNgay.ThienCan.Can, tru.DiaChi.Ten));
+            tru.AddThuocTinh(Constants.VONG_TRUONG_SINH, LookUpTable.VongTruongSinh(truNgay.ThienCan.Can, tru.DiaChi.Ten));
         }
 
         // Tieu Van starts at 1
@@ -67,7 +67,7 @@ public class TuTruMap {
         {
             Tru tru = this.LaSoCuaToi.TieuVan.get(i);
             SetNapAm(tru);
-            tru.ThuocTinh.put(Constants.VONG_TRUONG_SINH, LookUpTable.VongTruongSinh(truNgay.ThienCan.Can, tru.DiaChi.Ten));
+            tru.AddThuocTinh(Constants.VONG_TRUONG_SINH, LookUpTable.VongTruongSinh(truNgay.ThienCan.Can, tru.DiaChi.Ten));
         }
 
 //        #endregion Set Nap Am, Vong Truong Sinh
@@ -263,40 +263,40 @@ public class TuTruMap {
             case None:
                 break;
             case Ti:
-                cungMenh.ThuocTinh.put(Constants.CungMenhSao.CUNG_MENH_SAO, Constants.CungMenhSao.THIEN_QUY);
+                cungMenh.AddThuocTinh(Constants.CungMenhSao.CUNG_MENH_SAO, Constants.CungMenhSao.THIEN_QUY);
                 break;
             case Suu:
-                cungMenh.ThuocTinh.put(Constants.CungMenhSao.CUNG_MENH_SAO, Constants.CungMenhSao.THIEN_ACH);
+                cungMenh.AddThuocTinh(Constants.CungMenhSao.CUNG_MENH_SAO, Constants.CungMenhSao.THIEN_ACH);
                 break;
             case Dan:
-                cungMenh.ThuocTinh.put(Constants.CungMenhSao.CUNG_MENH_SAO, Constants.CungMenhSao.THIEN_QUYEN);
+                cungMenh.AddThuocTinh(Constants.CungMenhSao.CUNG_MENH_SAO, Constants.CungMenhSao.THIEN_QUYEN);
                 break;
             case Mao:
-                cungMenh.ThuocTinh.put(Constants.CungMenhSao.CUNG_MENH_SAO, Constants.CungMenhSao.THIEN_XICH);
+                cungMenh.AddThuocTinh(Constants.CungMenhSao.CUNG_MENH_SAO, Constants.CungMenhSao.THIEN_XICH);
                 break;
             case Thin:
-                cungMenh.ThuocTinh.put(Constants.CungMenhSao.CUNG_MENH_SAO, Constants.CungMenhSao.THIEN_NHU);
+                cungMenh.AddThuocTinh(Constants.CungMenhSao.CUNG_MENH_SAO, Constants.CungMenhSao.THIEN_NHU);
                 break;
             case Ty:
-                cungMenh.ThuocTinh.put(Constants.CungMenhSao.CUNG_MENH_SAO, Constants.CungMenhSao.THIEN_VAN);
+                cungMenh.AddThuocTinh(Constants.CungMenhSao.CUNG_MENH_SAO, Constants.CungMenhSao.THIEN_VAN);
                 break;
             case Ngo:
-                cungMenh.ThuocTinh.put(Constants.CungMenhSao.CUNG_MENH_SAO, Constants.CungMenhSao.THIEN_PHUC);
+                cungMenh.AddThuocTinh(Constants.CungMenhSao.CUNG_MENH_SAO, Constants.CungMenhSao.THIEN_PHUC);
                 break;
             case Mui:
-                cungMenh.ThuocTinh.put(Constants.CungMenhSao.CUNG_MENH_SAO, Constants.CungMenhSao.THIEN_LAO);
+                cungMenh.AddThuocTinh(Constants.CungMenhSao.CUNG_MENH_SAO, Constants.CungMenhSao.THIEN_LAO);
                 break;
             case Than:
-                cungMenh.ThuocTinh.put(Constants.CungMenhSao.CUNG_MENH_SAO, Constants.CungMenhSao.THIEN_QUA);
+                cungMenh.AddThuocTinh(Constants.CungMenhSao.CUNG_MENH_SAO, Constants.CungMenhSao.THIEN_QUA);
                 break;
             case Dau:
-                cungMenh.ThuocTinh.put(Constants.CungMenhSao.CUNG_MENH_SAO, Constants.CungMenhSao.THIEN_BI);
+                cungMenh.AddThuocTinh(Constants.CungMenhSao.CUNG_MENH_SAO, Constants.CungMenhSao.THIEN_BI);
                 break;
             case Tuat:
-                cungMenh.ThuocTinh.put(Constants.CungMenhSao.CUNG_MENH_SAO, Constants.CungMenhSao.THIEN_NGHE);
+                cungMenh.AddThuocTinh(Constants.CungMenhSao.CUNG_MENH_SAO, Constants.CungMenhSao.THIEN_NGHE);
                 break;
             case Hoi:
-                cungMenh.ThuocTinh.put(Constants.CungMenhSao.CUNG_MENH_SAO, Constants.CungMenhSao.THIEN_THO);
+                cungMenh.AddThuocTinh(Constants.CungMenhSao.CUNG_MENH_SAO, Constants.CungMenhSao.THIEN_THO);
                 break;
             default:
                 break;
@@ -403,7 +403,7 @@ public class TuTruMap {
     public void SetNapAm(Tru tru)
     {
         NguHanhEnum nguHanh = LookUpTable.NapAm.get(new Pair<>(tru.ThienCan.Can, tru.DiaChi.Ten));
-        tru.ThuocTinh.put(Constants.NAP_AM, nguHanh);
+        tru.AddThuocTinh(Constants.NAP_AM, nguHanh);
     }
 
 
