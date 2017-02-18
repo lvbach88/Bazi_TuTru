@@ -25,6 +25,10 @@ public class TruCanChiBase
         }
     }
 
+    public void ClearThanSat(){
+        this.ThanSat.clear();
+    }
+
     public void AddThuocTinh(String tenThuocTinh)
     {
         if (!this.ThuocTinh.containsKey(tenThuocTinh))
@@ -39,5 +43,9 @@ public class TruCanChiBase
         {
             this.ThuocTinh.put(tenThuocTinh, thuocTinh);
         }
+    }
+
+    public void ClearThuocTinh(){
+        this.ThuocTinh.clear();
     }
 }
