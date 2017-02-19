@@ -26,6 +26,7 @@ public class InteractionLaws {
     public void setAllLaws() {
         setThienCanNguHop();
         setDiaChiLucHop();
+        setDiaChiLucXung();
     }
 
     private void Init(TuTruMap ttm) {
@@ -144,11 +145,11 @@ public class InteractionLaws {
             }
 
             NguHanhEnum lucHop = NguHanhEnum.None;
-            List<ChiEnum> lucHopTho = new ArrayList<>(Arrays.asList(ChiEnum.Ti, ChiEnum.Suu, ChiEnum.Ngo, ChiEnum.Mui)) ; // { ChiEnum.Ti, ChiEnum.Suu, ChiEnum.Ngo, ChiEnum.Mui} ;
-            List<ChiEnum> lucHopMoc = new ArrayList<>(Arrays.asList(ChiEnum.Dan, ChiEnum.Hoi)) ;
-            List<ChiEnum> lucHopHoa = new ArrayList<>(Arrays.asList(ChiEnum.Mao, ChiEnum.Tuat)) ;
-            List<ChiEnum> lucHopKim = new ArrayList<>(Arrays.asList(ChiEnum.Thin, ChiEnum.Dau)) ;
-            List<ChiEnum> lucHopThuy = new ArrayList<>(Arrays.asList(ChiEnum.Ty, ChiEnum.Than)) ;
+            List<ChiEnum> lucHopTho = new ArrayList<>(Arrays.asList(ChiEnum.Ti, ChiEnum.Suu, ChiEnum.Ngo, ChiEnum.Mui)); // { ChiEnum.Ti, ChiEnum.Suu, ChiEnum.Ngo, ChiEnum.Mui} ;
+            List<ChiEnum> lucHopMoc = new ArrayList<>(Arrays.asList(ChiEnum.Dan, ChiEnum.Hoi));
+            List<ChiEnum> lucHopHoa = new ArrayList<>(Arrays.asList(ChiEnum.Mao, ChiEnum.Tuat));
+            List<ChiEnum> lucHopKim = new ArrayList<>(Arrays.asList(ChiEnum.Thin, ChiEnum.Dau));
+            List<ChiEnum> lucHopThuy = new ArrayList<>(Arrays.asList(ChiEnum.Ty, ChiEnum.Than));
 
 
             if (lucHopTho.contains(chiEnum1)) {
@@ -169,80 +170,51 @@ public class InteractionLaws {
 
     }
 
+    private void setDiaChiLucXung() {
+        setDiaChiLucXung(ChiEnum.Ti, ChiEnum.Ngo);
+        setDiaChiLucXung(ChiEnum.Suu, ChiEnum.Mui);
+        setDiaChiLucXung(ChiEnum.Dan, ChiEnum.Than);
 
+        setDiaChiLucXung(ChiEnum.Mao, ChiEnum.Dau);
+        setDiaChiLucXung(ChiEnum.Thin, ChiEnum.Tuat);
+        setDiaChiLucXung(ChiEnum.Ty, ChiEnum.Hoi);
+    }
+
+    private void setDiaChiLucXung(ChiEnum chiEnum1, ChiEnum chiEnum2) {
+        if (containChi(chiEnum1) && containChi(chiEnum2)) {
+            DiaChi diaChi1 = TongHopCanChi.getDiaChiByEnum(chiEnum1);
+            DiaChi diaChi2 = TongHopCanChi.getDiaChiByEnum(chiEnum2);
+
+            String thuocTinh = Constants.ThuocTinh.LUC_XUNG;
+
+            String lucXung = "";
+            List<ChiEnum> tiNgo = new ArrayList<>(Arrays.asList(ChiEnum.Ti, ChiEnum.Ngo)); // List<ChiEnum> {ChiEnum.Ti, ChiEnum.Ngo} ;
+            List<ChiEnum> suuMui = new ArrayList<>(Arrays.asList(ChiEnum.Suu, ChiEnum.Mui));// List<ChiEnum> {ChiEnum.Suu, ChiEnum.Mui} ;
+            List<ChiEnum> danThan = new ArrayList<>(Arrays.asList(ChiEnum.Dan, ChiEnum.Than));// List<ChiEnum> {ChiEnum.Dan, ChiEnum.Than} ;
+
+            List<ChiEnum> maoDau = new ArrayList<>(Arrays.asList(ChiEnum.Mao, ChiEnum.Dau));// List<ChiEnum> {ChiEnum.Mao, ChiEnum.Dau} ;
+            List<ChiEnum> thinTuat = new ArrayList<>(Arrays.asList(ChiEnum.Thin, ChiEnum.Tuat));// List<ChiEnum> {ChiEnum.Thin, ChiEnum.Tuat} ;
+            List<ChiEnum> tyHoi = new ArrayList<>(Arrays.asList(ChiEnum.Ty, ChiEnum.Hoi));// List<ChiEnum> {ChiEnum.Ty, ChiEnum.Hoi} ;
+
+            if (tiNgo.contains(chiEnum1)) {
+                lucXung = Constants.DiaChiLucXung.TI_NGO;
+            } else if (suuMui.contains(chiEnum1)) {
+                lucXung = Constants.DiaChiLucXung.SUU_MUI;
+            } else if (danThan.contains(chiEnum1)) {
+                lucXung = Constants.DiaChiLucXung.DAN_THAN;
+            } else if (maoDau.contains(chiEnum1)) {
+                lucXung = Constants.DiaChiLucXung.MAO_DAU;
+            } else if (thinTuat.contains(chiEnum1)) {
+                lucXung = Constants.DiaChiLucXung.THIN_TUAT;
+            } else if (tyHoi.contains(chiEnum1)) {
+                lucXung = Constants.DiaChiLucXung.TY_HOI;
+            }
+            diaChi1.AddThuocTinh(thuocTinh, lucXung);
+            diaChi2.AddThuocTinh(thuocTinh, lucXung);
+        }
+    }
 }
 
-
-
-//public class DiaChiLucXung : TruCollection
-//        {
-//public DiaChiLucXung(TuTruMap ttm)
-//        {
-//        base.Init(ttm);
-//        }
-//
-//public override void SetLaw()
-//        {
-//        this.CheckLucXung(ChiEnum.Ti, ChiEnum.Ngo);
-//        this.CheckLucXung(ChiEnum.Suu, ChiEnum.Mui);
-//        this.CheckLucXung(ChiEnum.Dan, ChiEnum.Than);
-//
-//        this.CheckLucXung(ChiEnum.Mao, ChiEnum.Dau);
-//        this.CheckLucXung(ChiEnum.Thin, ChiEnum.Tuat);
-//        this.CheckLucXung(ChiEnum.Ty, ChiEnum.Hoi);
-//        }
-//
-//private void CheckLucXung(ChiEnum chi1, ChiEnum chi2)
-//        {
-//        var chi1Id = TatcaTru.FindIndex(u => u.DiaChi.Ten == chi1);
-//        var chi2Id = TatcaTru.FindIndex(u => u.DiaChi.Ten == chi2);
-//
-//        if (chi1Id != -1 && chi2Id != -1)
-//        {
-//        var diaChi1 = TongHopCanChi.MuoiHaiDiaChi.Find(u => u.Ten == chi1);
-//        var diaChi2 = TongHopCanChi.MuoiHaiDiaChi.Find(u => u.Ten == chi2);
-//
-//        string thuocTinh = Constants.ThuocTinh.LUC_XUNG;
-//
-//        var lucXung = string.Empty;
-//        var tiNgo = new List<ChiEnum> { ChiEnum.Ti, ChiEnum.Ngo};
-//        var suuMui = new List<ChiEnum> { ChiEnum.Suu, ChiEnum.Mui };
-//        var danThan = new List<ChiEnum> { ChiEnum.Dan, ChiEnum.Than };
-//
-//        var maoDau = new List<ChiEnum> { ChiEnum.Mao, ChiEnum.Dau };
-//        var thinTuat = new List<ChiEnum> { ChiEnum.Thin, ChiEnum.Tuat};
-//        var tyHoi = new List<ChiEnum> { ChiEnum.Ty, ChiEnum.Hoi };
-//
-//        if (tiNgo.Contains(chi1))
-//        {
-//        lucXung = Constants.DiaChiLucXung.TI_NGO;
-//        }
-//        else if (suuMui.Contains(chi1))
-//        {
-//        lucXung = Constants.DiaChiLucXung.SUU_MUI;
-//        }
-//        else if (danThan.Contains(chi1))
-//        {
-//        lucXung = Constants.DiaChiLucXung.DAN_THAN;
-//        }
-//        else if (maoDau.Contains(chi1))
-//        {
-//        lucXung = Constants.DiaChiLucXung.MAO_DAU;
-//        }
-//        else if (thinTuat.Contains(chi1))
-//        {
-//        lucXung = Constants.DiaChiLucXung.THIN_TUAT;
-//        }
-//        else if (tyHoi.Contains(chi1))
-//        {
-//        lucXung = Constants.DiaChiLucXung.TY_HOI;
-//        }
-//        diaChi1.AddThuocTinh(thuocTinh, lucXung);
-//        diaChi2.AddThuocTinh(thuocTinh, lucXung);
-//        }
-//        }
-//        }
-//
 //public class DiaChiLucHai : TruCollection
 //        {
 //public DiaChiLucHai(TuTruMap ttm)
