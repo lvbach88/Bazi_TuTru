@@ -1,6 +1,6 @@
 package com.vietbachle.bazi_tutru_lib.BusinessRules;
 
-import android.util.Pair;
+import org.javatuples.Pair;
 
 import com.vietbachle.bazi_tutru_lib.Data.*;
 
@@ -168,7 +168,7 @@ public class TuTruMap {
             for (int i = 0; i < Constants.SO_DAI_VAN; i++)
             {
                 this.LaSoCuaToi.TuoiDaiVan.add(age);
-                if (daiVanHienTai != Integer.MIN_VALUE && daiVanHienTai == age) _daiVanHienTai = age;
+                if (daiVanHienTai != Integer.MIN_VALUE && daiVanHienTai == age) _daiVanHienTai = i;
                 age += Constants.NAM_DAI_VAN;
             }
         }
@@ -186,6 +186,10 @@ public class TuTruMap {
 //        }
 
         this.LuuNien = LookUpTable.TruOfTheYear();
+    }
+
+    public void CreateDaiVan(int age){
+        CreateDaiVan(age, Integer.MIN_VALUE);
     }
 
     public void CreateDaiVan(){

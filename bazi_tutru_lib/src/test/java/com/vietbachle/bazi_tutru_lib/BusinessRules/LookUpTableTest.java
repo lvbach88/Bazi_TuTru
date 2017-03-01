@@ -21,7 +21,7 @@ import static org.junit.Assert.*;
 public class LookUpTableTest {
 
     @Before
-    public void init() {
+    public void setUp() throws Exception {
         TongHopCanChi.Init();
         LookUpTable.Init();
     }
