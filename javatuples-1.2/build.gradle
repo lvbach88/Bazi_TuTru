@@ -1,0 +1,2 @@
+configurations.maybeCreate("default")
+artifacts.add("default", file('javatuples-1.2.jar'))

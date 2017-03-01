@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/Bazi_TuTru.iml" filepath="$PROJECT_DIR$/Bazi_TuTru.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/bazi_tutru_lib/bazi_tutru_lib.iml" filepath="$PROJECT_DIR$/bazi_tutru_lib/bazi_tutru_lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javatuples-1.2/javatuples-1.2.iml" filepath="$PROJECT_DIR$/javatuples-1.2/javatuples-1.2.iml" />
     </modules>
   </component>
 </project>

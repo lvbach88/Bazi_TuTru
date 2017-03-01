@@ -1,6 +1,7 @@
 package com.vietbachle.bazi_tutru_lib.BusinessRules;
 
-import android.util.Pair;
+//import android.util.Pair;
+import org.javatuples.Pair;
 
 import com.vietbachle.bazi_tutru_lib.Data.*;
 
