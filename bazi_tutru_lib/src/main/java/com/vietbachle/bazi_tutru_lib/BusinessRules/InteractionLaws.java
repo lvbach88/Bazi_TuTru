@@ -350,17 +350,21 @@ public class InteractionLaws extends TruCollection {
             thuocTinh = Constants.ThuocTinh.TAM_HOP;
         }
 
-        if (dc1 != null) {
-            this.setThuocTinhDiaChiTamHop(dc1, thuocTinh);
+        if (!thuocTinh.equalsIgnoreCase("")){
+            if (dc1 != null) {
+                this.setThuocTinhDiaChiTamHop(dc1, thuocTinh);
+            }
+
+            if (dc2 != null) {
+                this.setThuocTinhDiaChiTamHop(dc2, thuocTinh);
+            }
+
+            if (dc3 != null) {
+                this.setThuocTinhDiaChiTamHop(dc3, thuocTinh);
+            }
         }
 
-        if (dc2 != null) {
-            this.setThuocTinhDiaChiTamHop(dc2, thuocTinh);
-        }
 
-        if (dc3 != null) {
-            this.setThuocTinhDiaChiTamHop(dc3, thuocTinh);
-        }
     }
 
     private void setThuocTinhDiaChiTamHop(DiaChi dc, String thuocTinh) {
@@ -376,7 +380,7 @@ public class InteractionLaws extends TruCollection {
         } else if (thuy.contains(dc.Ten)) {
             dc.AddThuocTinh(thuocTinh, NguHanhEnum.Thuy);
         } else if (moc.contains(dc.Ten)) {
-            dc.AddThuocTinh(thuocTinh, NguHanhEnum.Tho);
+            dc.AddThuocTinh(thuocTinh, NguHanhEnum.Moc);
         }
     }
 

@@ -2,6 +2,7 @@ package com.vietbachle.bazi_tutru_lib.BusinessRules;
 
 import com.vietbachle.bazi_tutru_lib.Data.CanEnum;
 import com.vietbachle.bazi_tutru_lib.Data.ChiEnum;
+import com.vietbachle.bazi_tutru_lib.Data.Constants;
 import com.vietbachle.bazi_tutru_lib.Data.LaSo;
 import com.vietbachle.bazi_tutru_lib.Data.Tru;
 
@@ -29,9 +30,15 @@ public class TruCollection {
         TatcaTru = new ArrayList<>();
         TuTru = new ArrayList<>();
 
-        TuTru.addAll(laso.TuTru.values());
+        TuTru.add(laso.TuTru.get(Constants.TRU_NAM));
+        TuTru.add(laso.TuTru.get(Constants.TRU_THANG));
+        TuTru.add(laso.TuTru.get(Constants.TRU_NGAY));
+        TuTru.add(laso.TuTru.get(Constants.TRU_GIO));
 
-        TatcaTru.addAll(laso.TuTru.values());
+        TatcaTru.add(laso.TuTru.get(Constants.TRU_NAM));
+        TatcaTru.add(laso.TuTru.get(Constants.TRU_THANG));
+        TatcaTru.add(laso.TuTru.get(Constants.TRU_NGAY));
+        TatcaTru.add(laso.TuTru.get(Constants.TRU_GIO));
         TatcaTru.add(laso.CungMenh);
         TatcaTru.add(laso.ThaiNguyen);
         TatcaTru.add(ttm.DaiVanHienTai);
