@@ -1,3 +1,44 @@
 <resources>
     <string name="app_name">Bazi_TuTru</string>
+
+    <string-array name="thien_can">
+        <item>Giap</item>
+        <item>At</item>
+        <item>Binh</item>
+        <item>Dinh</item>
+        <item>Mau</item>
+        <item>Ky</item>
+        <item>Canh</item>
+        <item>Tan</item>
+        <item>Nham</item>
+        <item>Quy</item>
+    </string-array>
+
+    <string-array name="dia_chi">
+        <item>Ti</item>
+        <item>Suu</item>
+        <item>Dan</item>
+        <item>Mao</item>
+        <item>Thin</item>
+        <item>Ty</item>
+        <item>Ngo</item>
+        <item>Mui</item>
+        <item>Than</item>
+        <item>Dau</item>
+        <item>Tuat</item>
+        <item>Hoi</item>
+    </string-array>
+
+    <string-array name="tuoi_bat_dau">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+    </string-array>
 </resources>

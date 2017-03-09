@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:id="@+id/activity_info_gathering"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:paddingBottom="@dimen/activity_vertical_margin"-->
+    <!--android:paddingLeft="@dimen/activity_horizontal_margin"-->
+    <!--android:paddingRight="@dimen/activity_horizontal_margin"-->
+    <!--android:paddingTop="@dimen/activity_vertical_margin"-->
+    <!--tools:context="com.vietbachle.bazi_tutru.InfoGathering">-->
+ <!---->
+<!--</RelativeLayout>-->
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TableRow>
+        <TextView
+            android:id="@+id/txt_can_nam"
+            android:text="Can Năm"/>
+        <Spinner android:id="@+id/spn_can_nam"/>
+
+        <TextView
+            android:id="@+id/txt_chi_nam"
+            android:text="Chi Năm"/>
+        <Spinner android:id="@+id/spn_chi_nam"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:id="@+id/txt_can_thang"
+            android:text="Can Tháng"/>
+        <Spinner android:id="@+id/spn_can_thang"/>
+
+        <TextView
+            android:id="@+id/txt_chi_thang"
+            android:text="Chi Tháng"/>
+        <Spinner android:id="@+id/spn_chi_thang"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:id="@+id/txt_can_ngay"
+            android:text="Can Ngày"/>
+        <Spinner android:id="@+id/spn_can_ngay"/>
+
+        <TextView
+            android:id="@+id/txt_chi_ngay"
+            android:text="Chi Ngày"/>
+        <Spinner android:id="@+id/spn_chi_ngay"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:id="@+id/txt_can_gio"
+            android:text="Can Giờ"/>
+        <Spinner android:id="@+id/spn_can_gio"/>
+
+        <TextView
+            android:id="@+id/txt_chi_gio"
+            android:text="Chi Giờ"/>
+        <Spinner android:id="@+id/spn_chi_gio"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:id="@+id/txt_tuoi_bat_dau"
+            android:text="Tuổi Bắt Đầu"/>
+        <Spinner android:id="@+id/spn_tuoi_bat_dau"/>
+
+        <TextView
+            android:id="@+id/txt_tuoi_dai_van"
+            android:text="Tuổi Đại Vận"/>
+        <Spinner android:id="@+id/spn_tuoi_dai_van"/>
+    </TableRow>
+
+    <TableRow>
+        <Button
+            android:id="@+id/btn_submit"
+            android:text="Submit"
+            android:onClick="onSubmit" />
+    </TableRow>
+
+
+</TableLayout>
