@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:id="@+id/activity_bazi_map"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:paddingBottom="@dimen/activity_vertical_margin"-->
+    <!--android:paddingLeft="@dimen/activity_horizontal_margin"-->
+    <!--android:paddingRight="@dimen/activity_horizontal_margin"-->
+    <!--android:paddingTop="@dimen/activity_vertical_margin"-->
+    <!--tools:context="com.vietbachle.bazi_tutru.BaziMap">-->
+
+<!--</RelativeLayout>-->
+
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/activity_bazi_map">
+    <TableRow> <!--thien can-->
+        <include layout="@layout/thiencan"
+            android:id="@+id/tc_gio"/>
+
+        <include layout="@layout/thiencan"
+            android:id="@+id/tc_ngay"/>
+
+        <include layout="@layout/thiencan"
+            android:id="@+id/tc_thang"/>
+
+        <include layout="@layout/thiencan"
+            android:id="@+id/tc_nam"/>
+
+    </TableRow>
+    <TableRow> <!--dia chi-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <include layout="@layout/diachi"
+                android:id="@+id/dc_gio"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <include layout="@layout/thiencan"
+                    android:id="@+id/dc_gio_ban_khi"/>
+                <include layout="@layout/thiencan"
+                    android:id="@+id/dc_gio_trung_khi"/>
+                <include layout="@layout/thiencan"
+                    android:id="@+id/dc_gio_tap_khi"/>
+
+            </LinearLayout>
+        </LinearLayout> <!--dia chi gio-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <include layout="@layout/diachi"
+                android:id="@+id/dc_ngay"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <include layout="@layout/thiencan"
+                    android:id="@+id/dc_ngay_ban_khi"/>
+                <include layout="@layout/thiencan"
+                    android:id="@+id/dc_ngay_trung_khi"/>
+                <include layout="@layout/thiencan"
+                    android:id="@+id/dc_ngay_tap_khi"/>
+
+            </LinearLayout>
+        </LinearLayout> <!--dia chi ngay-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <include layout="@layout/diachi"
+                android:id="@+id/dc_thang"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <include layout="@layout/thiencan"
+                    android:id="@+id/dc_thang_ban_khi"/>
+                <include layout="@layout/thiencan"
+                    android:id="@+id/dc_thang_trung_khi"/>
+                <include layout="@layout/thiencan"
+                    android:id="@+id/dc_thang_tap_khi"/>
+
+            </LinearLayout>
+        </LinearLayout> <!--dia chi thang-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <include layout="@layout/diachi"
+                android:id="@+id/dc_nam"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <include layout="@layout/thiencan"
+                    android:id="@+id/dc_nam_ban_khi"/>
+                <include layout="@layout/thiencan"
+                    android:id="@+id/dc_nam_trung_khi"/>
+                <include layout="@layout/thiencan"
+                    android:id="@+id/dc_nam_tap_khi"/>
+
+            </LinearLayout>
+        </LinearLayout> <!--dia chi nam-->
+
+    </TableRow>
+    <TableRow>
+        <Button android:id="@+id/Click"
+            android:onClick="onClick"
+            android:text="Click to test"/>
+    </TableRow>
+
+</TableLayout>

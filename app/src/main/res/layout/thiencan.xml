@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_tc_10_gods"
+            android:text="10 Gods"/>
+
+        <!--List View Thuoc Tinh: 6X, 6H-->
+        <ListView
+            android:layout_height="match_parent"
+            android:id="@+id/lv_tc_attr"
+            android:layout_width="match_parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_tc_name"
+            android:text="Name"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_tc_5_elements"
+            android:text="5 Elements"/>
+    </LinearLayout>
+
+    <!--List View Than Sat-->
+    <ListView
+        android:layout_height="match_parent"
+        android:id="@+id/lv_tc_than_sat"
+        android:layout_width="match_parent" />
+</LinearLayout>

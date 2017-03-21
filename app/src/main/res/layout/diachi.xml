@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_dc_nap_am"
+            android:text="Nap Am"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_dc_truong_sinh"
+            android:text="Truong Sinh"/>
+
+        <!--List View Thuoc Tinh: 6X, 6H-->
+        <ListView
+            android:layout_height="match_parent"
+            android:id="@+id/lv_dc_attr"
+            android:layout_width="match_parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_dc_name"
+            android:text="Name"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_dc_5_elements"
+            android:text="5 Elements"/>
+    </LinearLayout>
+
+    <!--List View Than Sat-->
+    <ListView
+        android:layout_height="match_parent"
+        android:id="@+id/lv_dc_than_sat"
+        android:layout_width="match_parent" />
+</LinearLayout>
