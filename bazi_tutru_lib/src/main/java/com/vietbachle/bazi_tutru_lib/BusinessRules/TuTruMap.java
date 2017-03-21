@@ -46,20 +46,25 @@ public class TuTruMap {
         for (Tru tru : this.LaSoCuaToi.TuTru.values())
         {
             SetNapAm(tru);
-            tru.AddThuocTinh(Constants.VONG_TRUONG_SINH, LookUpTable.VongTruongSinh(truNgay.ThienCan.Can, tru.DiaChi.Ten));
+//            tru.AddThuocTinh(Constants.VONG_TRUONG_SINH, LookUpTable.VongTruongSinh(truNgay.ThienCan.Can, tru.DiaChi.Ten));
+        }
+
+        //Set Vong Truong Sinh
+        for (DiaChi chi : TongHopCanChi.MuoiHaiDiaChi){
+            chi.VongTruongSinh = LookUpTable.VongTruongSinh(truNgay.ThienCan.Can, chi.Ten);
         }
 
         Tru cm = this.LaSoCuaToi.CungMenh;
         Tru tn = this.LaSoCuaToi.ThaiNguyen;
         SetNapAm(cm);
-        cm.AddThuocTinh(Constants.VONG_TRUONG_SINH, LookUpTable.VongTruongSinh(truNgay.ThienCan.Can, cm.DiaChi.Ten));
+//        cm.AddThuocTinh(Constants.VONG_TRUONG_SINH, LookUpTable.VongTruongSinh(truNgay.ThienCan.Can, cm.DiaChi.Ten));
         SetNapAm(tn);
-        tn.AddThuocTinh(Constants.VONG_TRUONG_SINH, LookUpTable.VongTruongSinh(truNgay.ThienCan.Can, tn.DiaChi.Ten));
+//        tn.AddThuocTinh(Constants.VONG_TRUONG_SINH, LookUpTable.VongTruongSinh(truNgay.ThienCan.Can, tn.DiaChi.Ten));
 
         for (Tru tru : this.LaSoCuaToi.DaiVan)
         {
             SetNapAm(tru);
-            tru.AddThuocTinh(Constants.VONG_TRUONG_SINH, LookUpTable.VongTruongSinh(truNgay.ThienCan.Can, tru.DiaChi.Ten));
+//            tru.AddThuocTinh(Constants.VONG_TRUONG_SINH, LookUpTable.VongTruongSinh(truNgay.ThienCan.Can, tru.DiaChi.Ten));
         }
 
         // Tieu Van starts at 1
@@ -67,7 +72,7 @@ public class TuTruMap {
         {
             Tru tru = this.LaSoCuaToi.TieuVan.get(i);
             SetNapAm(tru);
-            tru.AddThuocTinh(Constants.VONG_TRUONG_SINH, LookUpTable.VongTruongSinh(truNgay.ThienCan.Can, tru.DiaChi.Ten));
+//            tru.AddThuocTinh(Constants.VONG_TRUONG_SINH, LookUpTable.VongTruongSinh(truNgay.ThienCan.Can, tru.DiaChi.Ten));
         }
 
 //        #endregion Set Nap Am, Vong Truong Sinh
